@@ -1,0 +1,6 @@
+C:\Users\PROGRAMACION\documents\visual studio 2013\Projects\ahoraSiEsteEsEncerio\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\PROGRAMACION\documents\visual studio 2013\Projects\ahoraSiEsteEsEncerio\Modelo\bin\Debug\Modelo.dll
+C:\Users\PROGRAMACION\documents\visual studio 2013\Projects\ahoraSiEsteEsEncerio\Modelo\bin\Debug\Modelo.pdb
+C:\Users\PROGRAMACION\documents\visual studio 2013\Projects\ahoraSiEsteEsEncerio\Modelo\obj\Debug\Modelo.dll
+C:\Users\PROGRAMACION\documents\visual studio 2013\Projects\ahoraSiEsteEsEncerio\Modelo\obj\Debug\Modelo.pdb
+C:\Users\PROGRAMACION\documents\visual studio 2013\Projects\ahoraSiEsteEsEncerio\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache

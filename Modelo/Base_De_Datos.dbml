@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="db_Lotus" Class="Base_De_DatosDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=db_Lotus;User ID=SA" SettingsObjectName="Modelo.Properties.Settings" SettingsPropertyName="db_LotusConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Tiene_materias" Member="Tiene_materias">
+    <Type Name="Tiene_materias">
+      <Column Name="ID_Estudiante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre_Materia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Tbl_Estudiante_Tiene_materias" Member="Tbl_Estudiante" ThisKey="ID_Estudiante" OtherKey="ID_Estudiante" Type="Tbl_Estudiante" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Tbl_Materia_Tiene_materias" Member="Tbl_Materia" ThisKey="Nombre_Materia" OtherKey="Nombre_Materia" Type="Tbl_Materia" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Clasifica_Habilidad" Member="Clasifica_Habilidad">
+    <Type Name="Clasifica_Habilidad">
+      <Column Name="ID_habilidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Estudiante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Tbl_Estudiante_Clasifica_Habilidad" Member="Tbl_Estudiante" ThisKey="ID_Estudiante" OtherKey="ID_Estudiante" Type="Tbl_Estudiante" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Tbl_Habilidades_Clasifica_Habilidad" Member="Tbl_Habilidades" ThisKey="ID_habilidad" OtherKey="ID_habilidad" Type="Tbl_Habilidades" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MaestroYestudiante" Member="MaestroYestudiante">
+    <Type Name="MaestroYestudiante">
+      <Column Name="ID_Estudiante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Maestro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Tbl_Estudiante_MaestroYestudiante" Member="Tbl_Estudiante" ThisKey="ID_Estudiante" OtherKey="ID_Estudiante" Type="Tbl_Estudiante" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Tbl_Maestro_MaestroYestudiante" Member="Tbl_Maestro" ThisKey="ID_Maestro" OtherKey="ID_Maestro" Type="Tbl_Maestro" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RealizaEvaluacion" Member="RealizaEvaluacion">
+    <Type Name="RealizaEvaluacion">
+      <Column Name="ID_Estudiante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Evalucion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Tbl_Estudiante_RealizaEvaluacion" Member="Tbl_Estudiante" ThisKey="ID_Estudiante" OtherKey="ID_Estudiante" Type="Tbl_Estudiante" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Tbl_Evaluacion_RealizaEvaluacion" Member="Tbl_Evaluacion" ThisKey="ID_Evalucion" OtherKey="ID_Evalucion" Type="Tbl_Evaluacion" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Calificaciones" Member="Tbl_Calificaciones">
+    <Type Name="Tbl_Calificaciones">
+      <Column Name="Cantidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre_Materia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Estudiante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Tbl_Estudiante_Tbl_Calificaciones" Member="Tbl_Estudiante" ThisKey="ID_Estudiante" OtherKey="ID_Estudiante" Type="Tbl_Estudiante" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Tbl_Materia_Tbl_Calificaciones" Member="Tbl_Materia" ThisKey="Nombre_Materia" OtherKey="Nombre_Materia" Type="Tbl_Materia" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Estudiante" Member="Tbl_Estudiante">
+    <Type Name="Tbl_Estudiante">
+      <Column Name="ID_Estudiante" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Numero_seccion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Padre" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Edad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Sexo" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Discapacidades" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="habitantesHogar" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Departamento" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Municipio" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Barrio" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PoseeEquipo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PoseeTelefono" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Intermet" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Tbl_Estudiante_Tiene_materias" Member="Tiene_materias" ThisKey="ID_Estudiante" OtherKey="ID_Estudiante" Type="Tiene_materias" />
+      <Association Name="Tbl_Estudiante_Clasifica_Habilidad" Member="Clasifica_Habilidad" ThisKey="ID_Estudiante" OtherKey="ID_Estudiante" Type="Clasifica_Habilidad" />
+      <Association Name="Tbl_Estudiante_MaestroYestudiante" Member="MaestroYestudiante" ThisKey="ID_Estudiante" OtherKey="ID_Estudiante" Type="MaestroYestudiante" />
+      <Association Name="Tbl_Estudiante_RealizaEvaluacion" Member="RealizaEvaluacion" ThisKey="ID_Estudiante" OtherKey="ID_Estudiante" Type="RealizaEvaluacion" />
+      <Association Name="Tbl_Estudiante_Tbl_Calificaciones" Member="Tbl_Calificaciones" ThisKey="ID_Estudiante" OtherKey="ID_Estudiante" Type="Tbl_Calificaciones" />
+      <Association Name="Tbl_Padre_Famila_Tbl_Estudiante" Member="Tbl_Padre_Famila" ThisKey="ID_Padre" OtherKey="ID_Padre" Type="Tbl_Padre_Famila" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Tbl_Seccion_Tbl_Estudiante" Member="Tbl_Seccion" ThisKey="Numero_seccion" OtherKey="Numero_seccion" Type="Tbl_Seccion" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Evaluacion" Member="Tbl_Evaluacion">
+    <Type Name="Tbl_Evaluacion">
+      <Column Name="ID_Evalucion" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EjercisioAsignado" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="RespuestaCorrecta" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CantidadDeIntentos" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RespuestasCorrectas" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Tbl_Evaluacion_RealizaEvaluacion" Member="RealizaEvaluacion" ThisKey="ID_Evalucion" OtherKey="ID_Evalucion" Type="RealizaEvaluacion" />
+      <Association Name="Tbl_Intentos_Tbl_Evaluacion" Member="Tbl_Intentos" ThisKey="CantidadDeIntentos" OtherKey="CantidadDeIntentos" Type="Tbl_Intentos" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Tbl_Respuestas_Tbl_Evaluacion" Member="Tbl_Respuestas" ThisKey="RespuestasCorrectas" OtherKey="RespuestasCorrectas" Type="Tbl_Respuestas" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Grado" Member="Tbl_Grado">
+    <Type Name="Tbl_Grado">
+      <Column Name="Numero_Grado" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="Tbl_Grado_Tbl_Seccion" Member="Tbl_Seccion" ThisKey="Numero_Grado" OtherKey="Numero_Grado" Type="Tbl_Seccion" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Habilidades" Member="Tbl_Habilidades">
+    <Type Name="Tbl_Habilidades">
+      <Column Name="ID_habilidad" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre_Habilidad" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Association Name="Tbl_Habilidades_Clasifica_Habilidad" Member="Clasifica_Habilidad" ThisKey="ID_habilidad" OtherKey="ID_habilidad" Type="Clasifica_Habilidad" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Intentos" Member="Tbl_Intentos">
+    <Type Name="Tbl_Intentos">
+      <Column Name="CantidadDeIntentos" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Tbl_Intentos_Tbl_Evaluacion" Member="Tbl_Evaluacion" ThisKey="CantidadDeIntentos" OtherKey="CantidadDeIntentos" Type="Tbl_Evaluacion" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Maestro" Member="Tbl_Maestro">
+    <Type Name="Tbl_Maestro">
+      <Column Name="ID_Maestro" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Correo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="contraseña" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PresguntaSeguridad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RespuestasPreguntaSeguridad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="linea" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NombreDocente" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Tbl_Maestro_MaestroYestudiante" Member="MaestroYestudiante" ThisKey="ID_Maestro" OtherKey="ID_Maestro" Type="MaestroYestudiante" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Materia" Member="Tbl_Materia">
+    <Type Name="Tbl_Materia">
+      <Column Name="Nombre_Materia" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="Tbl_Materia_Tiene_materias" Member="Tiene_materias" ThisKey="Nombre_Materia" OtherKey="Nombre_Materia" Type="Tiene_materias" />
+      <Association Name="Tbl_Materia_Tbl_Calificaciones" Member="Tbl_Calificaciones" ThisKey="Nombre_Materia" OtherKey="Nombre_Materia" Type="Tbl_Calificaciones" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Padre_Famila" Member="Tbl_Padre_Famila">
+    <Type Name="Tbl_Padre_Famila">
+      <Column Name="ID_Padre" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="apellido" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="correo" Type="System.String" DbType="VarChar(90) NOT NULL" CanBeNull="false" />
+      <Column Name="contraseña" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="PreguntaSeguridad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RespuestaPreguntaSeguridad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="linea" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Tbl_Padre_Famila_Tbl_Estudiante" Member="Tbl_Estudiante" ThisKey="ID_Padre" OtherKey="ID_Padre" Type="Tbl_Estudiante" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Respuestas" Member="Tbl_Respuestas">
+    <Type Name="Tbl_Respuestas">
+      <Column Name="RespuestasCorrectas" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Tbl_Respuestas_Tbl_Evaluacion" Member="Tbl_Evaluacion" ThisKey="RespuestasCorrectas" OtherKey="RespuestasCorrectas" Type="Tbl_Evaluacion" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Seccion" Member="Tbl_Seccion">
+    <Type Name="Tbl_Seccion">
+      <Column Name="Numero_seccion" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Numero_Grado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Tbl_Seccion_Tbl_Estudiante" Member="Tbl_Estudiante" ThisKey="Numero_seccion" OtherKey="Numero_seccion" Type="Tbl_Estudiante" />
+      <Association Name="Tbl_Grado_Tbl_Seccion" Member="Tbl_Grado" ThisKey="Numero_Grado" OtherKey="Numero_Grado" Type="Tbl_Grado" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.InicioSesionDocente" Method="InicioSesionDocente">
+    <Parameter Name="UsuarioDocente" Parameter="usuarioDocente" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Contraseña" Parameter="contraseña" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="InicioSesionDocenteResult">
+      <Column Name="Resultado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.IniciaSesionPadre" Method="IniciaSesionPadre">
+    <Parameter Name="UsuarioPadre" Parameter="usuarioPadre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Contraseña" Parameter="contraseña" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="IniciaSesionPadreResult">
+      <Column Name="ResultadoP" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
