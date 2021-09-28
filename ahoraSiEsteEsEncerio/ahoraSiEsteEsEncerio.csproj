@@ -63,6 +63,7 @@
     <Content Include="index\jquery.min.js" />
     <Content Include="Iniciar_Sesion.aspx" />
     <Content Include="Iniciar_Sesion_Alumno.aspx" />
+    <Content Include="Pantallas\Maestro\IndexDocente.aspx" />
     <Content Include="plantillaImportante\Usando\.DS_Store" />
     <Content Include="plantillaImportante\Usando\css\.DS_Store" />
     <Content Include="plantillaImportante\Usando\css\bootstrap\.DS_Store" />
@@ -269,6 +270,7 @@
     <Content Include="RecursosProgramar\Js\.DS_Store" />
     <Content Include="Contenido\CImagenes\Fuentes\contenido\tekton-pro-bold.otf" />
     <Content Include="Contenido\CImagenes\Fuentes\contenido\tekton-pro.otf" />
+    <Content Include="Pantallas\Maestro\MasterPageDocente.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -358,6 +360,20 @@
     </Compile>
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Maestro\IndexDocente.aspx.cs">
+      <DependentUpon>IndexDocente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Maestro\IndexDocente.aspx.designer.cs">
+      <DependentUpon>IndexDocente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Maestro\MasterPageDocente.Master.cs">
+      <DependentUpon>MasterPageDocente.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Maestro\MasterPageDocente.Master.designer.cs">
+      <DependentUpon>MasterPageDocente.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

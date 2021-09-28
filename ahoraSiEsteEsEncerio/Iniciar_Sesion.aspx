@@ -27,7 +27,7 @@
             <ContentTemplate>
 
                 <!--Empieza el contenido de la pagina-->
-
+                
 
                 <fieldset>
 
@@ -163,7 +163,7 @@
                                             <h3 style="font-family: tekton-pro; color: #C30174"></span>Contraseña</h3>
 
                                         </div>
-
+                                        
 
                                         <div style="text-align: center;">
 

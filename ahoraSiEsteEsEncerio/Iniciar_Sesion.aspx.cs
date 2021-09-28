@@ -110,13 +110,13 @@ namespace ahoraSiEsteEsEncerio
             }
             else
             {
-                Docente_obj dn = new  Docente_obj();
+                Docente_obj dn = new Docente_obj();
 
-                bool Resultado = dn.IniciarSesion(NombreProfeso,ContrasenaProfeso);
+                bool Resultado = dn.IniciarSesion(NombreProfeso, ContrasenaProfeso);
 
                 if (Resultado)
                 {
-                    Response.Redirect("Ayuda.aspx");
+                    Response.Redirect("Pantallas/Maestro/IndexDocente.aspx");
 
                 }
                 else
@@ -133,8 +133,8 @@ namespace ahoraSiEsteEsEncerio
 
         }
 
-      
-     
+
+
 
         protected void Boton_Padres_Click(object sender, EventArgs e)
         {
@@ -150,6 +150,26 @@ namespace ahoraSiEsteEsEncerio
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Pop", "openModal();", true);
 
             }
+            else
+            {
+                Tutor_obj tn = new Tutor_obj();
+                bool Resultado = tn.IniciarSesionTutor(NombreTutor, ContraseñaTutor);
+                if (Resultado)
+                {
+
+                    Response.Redirect("Ayuda.aspx");
+
+
+                }
+                else
+                {
+
+                    Lbl_PadreC.Text = "Ocurrio un erro";
+
+                }
+
+            }
+
 
         }
 
