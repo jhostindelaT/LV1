@@ -8,7 +8,7 @@
         function openModal() {
             $('#staticBackdrop').modal('show');
         }
-      
+
 
 
     </script>
@@ -26,8 +26,11 @@
 
             <ContentTemplate>
 
+
+
+
                 <!--Empieza el contenido de la pagina-->
-                
+
 
                 <fieldset>
 
@@ -66,7 +69,7 @@
 
                                     <!---->
                                     <!--Empieza el cuerpo del fomulario-->
-                                    <div class="container" style="margin-top: 20px;">
+                                    <div class="container" style="margin-top: 20px; margin-bottom: 22px;">
 
                                         <!--Nombre Docente-->
                                         <div class="btn-group" style="margin-left: 25px;">
@@ -108,16 +111,20 @@
                                     </div>
                                     <!---->
 
-                                    <asp:Label ID="lbl_Mensaje" runat="server" Text="Label"></asp:Label>
-                                   
-                                     <!--Boton Iniciar cesion en Msistros-->
+                                    <div class="alert alert-danger" style="width: 90%; align-items: center; margin: 0 auto; border-radius: 22px;"
+                                        runat="server" id="AlertaMaestroD" visible="false" role="alert">
+                                        <marquee><asp:Label ID="AlertaMaestro" Text="gola" runat="server"></asp:Label></marquee>
+
+                                    </div>
+
+                                    <!--Boton Iniciar cesion en Msistros-->
                                     <div id="Borton_COntraseñaP" style="text-align: center; margin-top: 30px;">
 
                                         <asp:Button ID="IniciarMaestro" OnClick="IniciarMaestro_Click" UseSubmitBehavior="false" runat="server" Text="Iniciar Sesíon" />
 
                                     </div>
 
-                                    
+
 
                                 </div>
                             </div>
@@ -132,7 +139,7 @@
                                         <h5 class="card-title" style="font-family: tekton-pro-bold; font-size: 3em; margin-top: -59px; color: #C30174;">Padre o Tutor</h5>
                                     </div>
                                     <!--Empieza el cuerpo del fomulario-->
-                                    <div class="container" style="margin-top: 20px;">
+                                    <div class="container" style="margin-top: 20px;  margin-bottom: 22px;">
 
                                         <!--Nombre Padre-->
                                         <div class="btn-group" style="margin-left: 25px;">
@@ -163,7 +170,7 @@
                                             <h3 style="font-family: tekton-pro; color: #C30174"></span>Contraseña</h3>
 
                                         </div>
-                                        
+
 
                                         <div style="text-align: center;">
 
@@ -173,14 +180,18 @@
                                     </div>
                                     <!---->
 
-                                    <asp:Label ID="Lbl_PadreC" runat="server" Text="Label">labe</asp:Label>
+                                    <div class="alert alert-danger" style="width: 90%; align-items: center; margin: 0 auto; border-radius: 22px;"
+                                        runat="server" id="AlertaPadresD" visible="false" role="alert">
+                                        <marquee><asp:Label ID="AlertaPadres" Text="gola" runat="server"></asp:Label></marquee>
+
+                                    </div>
 
                                     <!--Boton Iniciar cesion en Padres-->
                                     <div id="Boton_COntraseña" style="text-align: center; margin-top: 30px;">
 
-                                       
 
-                                        <asp:Button ID="Boton_Padres" UseSubmitBehavior="false" runat="server" OnClick="Boton_Padres_Click" Text="Iniciar Sesíon"/>
+
+                                        <asp:Button ID="Boton_Padres" UseSubmitBehavior="false" runat="server" OnClick="Boton_Padres_Click" Text="Iniciar Sesíon" />
 
 
                                     </div>
@@ -216,23 +227,23 @@
                     </div>
 
                     <!--Inicio del modal Maestros-->
-                    <div class="container" style="text-align: center; align-content: center">
+                    <div class="container" style="text-align: center; align-content: center;font-family:tekton-pro-bold">
 
                         <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div class="modal-dialog">
-                                <div class="modal-content" style="width: 720px;">
+                                <div class="modal-content" style="width: 720px">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="staticBackdropLabel">
+                                        <h5 class="modal-title" style="font-family:tekton-pro-bold;" id="staticBackdropLabel">
                                             <asp:Label ID="titulo1" runat="server" Text="Label"></asp:Label></h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <button type="button"class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <div class="modal-body">
-                                        <h2>Se necesita almenos trescaracteres en los dos campos solicitados.</h2>
+                                    <div class="modal-body" >
+                                        <h2 style="font-family:tekton-pro-bold;">Se necesita almenos trescaracteres en los dos campos solicitados.</h2>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" style="background-color:#C30174; border:none" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
                                     </div>
                                 </div>
@@ -240,30 +251,7 @@
                         </div>
                     </div>
 
-                    <!--Inicio del modal Maestros-->
-                    <div class="container" style="text-align: center; align-content: center">
-
-                        <div class="modal fade" id="SEGUNDOMODAL" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content" style="width: 720px;">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="SEGUNDOLABEL">
-                                            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <h2>Se necesita almenos trescaracteres en los dos campos solicitados.</h2>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+       
 
                 </fieldset>
 

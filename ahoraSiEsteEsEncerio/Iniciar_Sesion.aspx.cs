@@ -116,12 +116,16 @@ namespace ahoraSiEsteEsEncerio
 
                 if (Resultado)
                 {
+
+                    Session["DocenteInicia"] = new Docente_obj().getMaestroByID(NombreProfeso, ContrasenaProfeso);
+                  
                     Response.Redirect("Pantallas/Maestro/IndexDocente.aspx");
 
                 }
                 else
                 {
-                    lbl_Mensaje.Text = "Usuario O contraseña Incorecto";
+                    AlertaMaestroD.Visible = true;
+                    AlertaMaestro.Text = "Usuario o contraseña son incorrectos";
 
 
                 }
@@ -163,8 +167,9 @@ namespace ahoraSiEsteEsEncerio
                 }
                 else
                 {
-
-                    Lbl_PadreC.Text = "Ocurrio un erro";
+                    AlertaPadresD.Visible = true;
+                    AlertaPadres.Text = "Usuario o contraseña son incorrectos";
+                    
 
                 }
 

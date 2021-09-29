@@ -58,13 +58,22 @@ namespace ahoraSiEsteEsEncerio {
         protected global::System.Web.UI.WebControls.TextBox ContrasenaM;
         
         /// <summary>
-        /// Control lbl_Mensaje.
+        /// Control AlertaMaestroD.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_Mensaje;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AlertaMaestroD;
+        
+        /// <summary>
+        /// Control AlertaMaestro.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label AlertaMaestro;
         
         /// <summary>
         /// Control IniciarMaestro.
@@ -94,13 +103,22 @@ namespace ahoraSiEsteEsEncerio {
         protected global::System.Web.UI.WebControls.TextBox ContrasenaP;
         
         /// <summary>
-        /// Control Lbl_PadreC.
+        /// Control AlertaPadresD.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lbl_PadreC;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AlertaPadresD;
+        
+        /// <summary>
+        /// Control AlertaPadres.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label AlertaPadres;
         
         /// <summary>
         /// Control Boton_Padres.
@@ -137,14 +155,5 @@ namespace ahoraSiEsteEsEncerio {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label titulo1;
-        
-        /// <summary>
-        /// Control Label1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
     }
 }
