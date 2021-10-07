@@ -44,5 +44,37 @@ namespace Modelo
 
         }
 
+
+        public int Usuarioinisiado(string nombreD, string ContraseñaD)
+        {
+            Base_De_DatosDataContext dc = new Base_De_DatosDataContext();
+            try
+            {
+                if (dc.Tbl_Maestro.Any(a => a.NombreDocente == nombreD && a.contraseña == ContraseñaD))
+                {
+                    return (from UsuarioMaestro in dc.Tbl_Maestro where (UsuarioMaestro.NombreDocente == nombreD && UsuarioMaestro.contraseña == ContraseñaD) select UsuarioMaestro).First().ID_Maestro;
+
+
+                }
+                else
+                {
+                    return 0;
+
+                }
+
+
+            }
+            catch (Exception)
+            {
+                
+                return 0;
+            }
+
+
+
+        }
+
+
+
     }
 }

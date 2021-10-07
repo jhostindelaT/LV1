@@ -10,7 +10,6 @@
         }
 
 
-
     </script>
 
 
@@ -40,7 +39,7 @@
 
                      <h1 id="TextoDelTitulo" style="
     color: #C30174;
-        font-size: 5em;
+    font-size: 5em;
     font-family:tekton-pro-bold;
     background-color: #ffffffc2;
     border-radius: 20px;
@@ -139,7 +138,7 @@
                                         <h5 class="card-title" style="font-family: tekton-pro-bold; font-size: 3em; margin-top: -59px; color: #C30174;">Padre o Tutor</h5>
                                     </div>
                                     <!--Empieza el cuerpo del fomulario-->
-                                    <div class="container" style="margin-top: 20px;  margin-bottom: 22px;">
+                                    <div class="container" style="margin-top: 20px; margin-bottom: 22px;">
 
                                         <!--Nombre Padre-->
                                         <div class="btn-group" style="margin-left: 25px;">
@@ -214,7 +213,7 @@
 
                         <div class="container" style="text-align: center; margin-top: 50px;">
 
-                            <asp:Button ID="Iniciar_estudiante" PostBackUrl="~/Iniciar_Sesion_Alumno.aspx" runat="server" Text="Estudiante" />
+                            <asp:Button ID="Iniciar_estudiante" UseSubmitBehavior="false" PostBackUrl="~/Iniciar_Sesion_Alumno.aspx" runat="server" Text="Estudiante" />
 
 
                         </div>
@@ -227,23 +226,23 @@
                     </div>
 
                     <!--Inicio del modal Maestros-->
-                    <div class="container" style="text-align: center; align-content: center;font-family:tekton-pro-bold">
+                    <div class="container" style="text-align: center; align-content: center; font-family: tekton-pro-bold">
 
                         <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content" style="width: 720px">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" style="font-family:tekton-pro-bold;" id="staticBackdropLabel">
+                                        <h5 class="modal-title" style="font-family: tekton-pro-bold;" id="staticBackdropLabel">
                                             <asp:Label ID="titulo1" runat="server" Text="Label"></asp:Label></h5>
-                                        <button type="button"class="close" data-dismiss="modal" aria-label="Close">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <div class="modal-body" >
-                                        <h2 style="font-family:tekton-pro-bold;">Se necesita almenos trescaracteres en los dos campos solicitados.</h2>
+                                    <div class="modal-body">
+                                        <h2 style="font-family: tekton-pro-bold;">Se necesita almenos trescaracteres en los dos campos solicitados.</h2>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" style="background-color:#C30174; border:none" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" style="background-color: #C30174; border: none" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
                                     </div>
                                 </div>
@@ -251,7 +250,7 @@
                         </div>
                     </div>
 
-       
+
 
                 </fieldset>
 

@@ -19,7 +19,7 @@ namespace ahoraSiEsteEsEncerio
             Nombre.Style["border-top-left-radius"] = "33px";
             Nombre.Style["border-bottom-right-radius"] = "33px";
             Nombre.Style["height"] = "65px";
-            Nombre.Style["width"] = "19em";
+            Nombre.Style["width"] = "70%";
             Nombre.Style["color"] = "#C30174";
             Nombre.Style["font-family"] = "tekton-pro";
 
@@ -30,7 +30,7 @@ namespace ahoraSiEsteEsEncerio
             ContrasenaM.Style["border-top-left-radius"] = "33px";
             ContrasenaM.Style["border-bottom-right-radius"] = "33px";
             ContrasenaM.Style["height"] = "65px";
-            ContrasenaM.Style["width"] = "19em";
+            ContrasenaM.Style["width"] = "70%";
             ContrasenaM.Style["text-align"] = "center";
 
             NombreP.Style["font-size"] = "22px";
@@ -40,7 +40,7 @@ namespace ahoraSiEsteEsEncerio
             NombreP.Style["border-top-left-radius"] = "33px";
             NombreP.Style["border-bottom-right-radius"] = "33px";
             NombreP.Style["height"] = "65px";
-            NombreP.Style["width"] = "19em";
+            NombreP.Style["width"] = "70%";
             NombreP.Style["color"] = "#C30174";
             NombreP.Style["font-family"] = "tekton-pro";
 
@@ -51,7 +51,7 @@ namespace ahoraSiEsteEsEncerio
             ContrasenaP.Style["border-top-left-radius"] = "33px";
             ContrasenaP.Style["border-bottom-right-radius"] = "33px";
             ContrasenaP.Style["height"] = "65px";
-            ContrasenaP.Style["width"] = "19em";
+            ContrasenaP.Style["width"] = "70%";
             ContrasenaP.Style["text-align"] = "center";
 
 
@@ -117,7 +117,7 @@ namespace ahoraSiEsteEsEncerio
                 if (Resultado)
                 {
 
-                    Session["DocenteInicia"] = new Docente_obj().getMaestroByID(NombreProfeso, ContrasenaProfeso);
+                    Session["DocenteInicia"] = dn.Usuarioinisiado(NombreProfeso, ContrasenaProfeso);
                   
                     Response.Redirect("Pantallas/Maestro/IndexDocente.aspx");
 

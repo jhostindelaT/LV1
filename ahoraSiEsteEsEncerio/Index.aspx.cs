@@ -12,6 +12,12 @@ namespace ahoraSiEsteEsEncerio
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            Titulo.Style["font-size"] = "6em";
+            Titulo.Style["font-family"] = "tekton-pro-bold";
+            Titulo.Style["color"] = "#C30174";
+
+
+
         }
     }
 }

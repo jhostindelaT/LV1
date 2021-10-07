@@ -40,7 +40,7 @@
 
 
         <div class="wrapper d-flex align-items-stretch">
-            <nav id="sidebar" style="background-color: #C30174; font-size: 38px;">
+            <nav id="sidebar" style="background-color: #C30174; font-size: 38px; ">
                 <div class="custom-menu">
                 </div>
 

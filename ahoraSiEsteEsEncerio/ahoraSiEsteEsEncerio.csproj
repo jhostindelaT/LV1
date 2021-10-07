@@ -64,6 +64,7 @@
     <Content Include="Iniciar_Sesion.aspx" />
     <Content Include="Iniciar_Sesion_Alumno.aspx" />
     <Content Include="Pantallas\Maestro\IndexDocente.aspx" />
+    <Content Include="Pantallas\Maestro\Registro_Academico.aspx" />
     <Content Include="plantillaImportante\Usando\.DS_Store" />
     <Content Include="plantillaImportante\Usando\css\.DS_Store" />
     <Content Include="plantillaImportante\Usando\css\bootstrap\.DS_Store" />
@@ -374,6 +375,13 @@
     </Compile>
     <Compile Include="Pantallas\Maestro\MasterPageDocente.Master.designer.cs">
       <DependentUpon>MasterPageDocente.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Maestro\Registro_Academico.aspx.cs">
+      <DependentUpon>Registro_Academico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Maestro\Registro_Academico.aspx.designer.cs">
+      <DependentUpon>Registro_Academico.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

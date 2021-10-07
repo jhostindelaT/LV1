@@ -30,8 +30,38 @@ namespace ahoraSiEsteEsEncerio
             UEstuadiante.Style["height"] = "65px";
             UEstuadiante.Style["width"] = "19em";
             UEstuadiante.Style["text-align"] = "center";
+
+            Btn_Inicio.Style["background"]= "none";
+            Btn_Inicio.Style["color"]= "white";
+            Btn_Inicio.Style["border"]= "none";
+             Btn_Inicio.Style["font-size"]= "2em";
+               
            
             
+
+        }
+        
+
+        protected void Btn_Inicio_Click(object sender, EventArgs e)
+        {
+
+
+            string NombreEstudiante = UEstuadiante.Text;
+            string ContraseñaEstudiante = ContraseñaE.Text;
+
+            if (NombreEstudiante.Length < 3 && ContraseñaEstudiante.Length < 3)
+            {
+                titulo.Text = "Alumno";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Pop", "Abrir();", true);
+
+
+            }
+            else
+            {
+                UEstuadiante.Text = "funciona";
+            }
+
+
 
         }
     }
