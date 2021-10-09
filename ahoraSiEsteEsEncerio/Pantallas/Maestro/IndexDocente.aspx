@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div style="width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover; background-image: url(../../Contenido/CImagenes/Fondos/Maestro/Pantalla%20inicial%20docentes.png )">
+    <div style="width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover; background-image: url(../../Contenido/CImagenes/Fondos/Maestro/Pantalla%20inicial%20docentes.png)">
 
         <asp:ScriptManager ID="ScriptManager1" runat="server">
         </asp:ScriptManager>
@@ -23,7 +23,7 @@
                                 <a href="Registro_Academico.aspx">
                                     <div class="card" style="height: 350px; border-top-left-radius: 30%; text-align: center; color: white; border-bottom-right-radius: 20%; background-color: #c30174;">
                                         <div class="card-body" style="">
-                                            <h1 style="font-family: tekton-pro-bold; margin-top: 22%; /* font-size: 50%; */color: white; margin-top: 25%;">Registro Academico</h1>
+                                            <h1 style="font-family: tekton-pro-bold; margin-top: 22%; color: white; margin-top: 25%;">Registro Academico</h1>
 
 
                                         </div>
@@ -41,7 +41,7 @@
                                 <a href="IndexDocente.aspx">
                                     <div class="card" style="height: 350px; border-top-left-radius: 30%; text-align: center; color: white; border-bottom-right-radius: 20%; background-color: #c30174;">
                                         <div class="card-body" style="">
-                                            <h1 style="font-family: tekton-pro-bold; margin-top: 22%; /* font-size: 50%; */color: white; margin-top: 25%;">Lista de Estudiantes</h1>
+                                            <h1 style="font-family: tekton-pro-bold; margin-top: 22%;color: white; margin-top: 25%;">Lista de Estudiantes</h1>
 
 
                                         </div>
