@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="bd_proyectLotus" Class="bd_newLotusDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=bd_proyectLotus;User ID=sa" SettingsObjectName="Modelo.Properties.Settings" SettingsPropertyName="bd_proyectLotusConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Tbl_Usuario" Member="Tbl_Usuario">
+    <Type Name="Tbl_Usuario">
+      <Column Name="ID_usuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_TipoUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Capasidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Usuario" Type="System.String" DbType="VarChar(90) NOT NULL" CanBeNull="false" />
+      <Column Name="NombreUsuario" Type="System.String" DbType="VarChar(90) NOT NULL" CanBeNull="false" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(90) NOT NULL" CanBeNull="false" />
+      <Column Name="EdadUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Linea" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Contraseña" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="Tbl_Usuario_Tbl_Matricula" Member="Tbl_Matricula" ThisKey="ID_usuario" OtherKey="ID_usuario" Type="Tbl_Matricula" />
+      <Association Name="Tbl_Capasidad_Tbl_Usuario" Member="Tbl_Capasidad" ThisKey="ID_Capasidad" OtherKey="ID_Capasidad" Type="Tbl_Capasidad" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Tbl_TipoUsuario_Tbl_Usuario" Member="Tbl_TipoUsuario" ThisKey="ID_TipoUsuario" OtherKey="ID_TipoUsuario" Type="Tbl_TipoUsuario" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Capasidad" Member="Tbl_Capasidad">
+    <Type Name="Tbl_Capasidad">
+      <Column Name="ID_Capasidad" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre_Capasidad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Tbl_Capasidad_Tbl_Usuario" Member="Tbl_Usuario" ThisKey="ID_Capasidad" OtherKey="ID_Capasidad" Type="Tbl_Usuario" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_grado" Member="Tbl_grado">
+    <Type Name="Tbl_grado">
+      <Column Name="ID_grado" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NombreGrado" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Tbl_grado_Tbl_Matricula" Member="Tbl_Matricula" ThisKey="ID_grado" OtherKey="ID_grado" Type="Tbl_Matricula" />
+      <Association Name="Tbl_grado_Tbl_seccion" Member="Tbl_seccion" ThisKey="ID_grado" OtherKey="ID_grado" Type="Tbl_seccion" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Matricula" Member="Tbl_Matricula">
+    <Type Name="Tbl_Matricula">
+      <Column Name="ID_usuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_grado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Tbl_grado_Tbl_Matricula" Member="Tbl_grado" ThisKey="ID_grado" OtherKey="ID_grado" Type="Tbl_grado" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Tbl_Usuario_Tbl_Matricula" Member="Tbl_Usuario" ThisKey="ID_usuario" OtherKey="ID_usuario" Type="Tbl_Usuario" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_seccion" Member="Tbl_seccion">
+    <Type Name="Tbl_seccion">
+      <Column Name="ID_seccion" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_grado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombreDeSeccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Tbl_grado_Tbl_seccion" Member="Tbl_grado" ThisKey="ID_grado" OtherKey="ID_grado" Type="Tbl_grado" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_TipoUsuario" Member="Tbl_TipoUsuario">
+    <Type Name="Tbl_TipoUsuario">
+      <Column Name="ID_TipoUsuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NombretipoUsuario" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Tbl_TipoUsuario_Tbl_Usuario" Member="Tbl_Usuario" ThisKey="ID_TipoUsuario" OtherKey="ID_TipoUsuario" Type="Tbl_Usuario" />
+    </Type>
+  </Table>
+  <Function Name="dbo.ComprobacionDeInicioSesion" Method="ComprobacionDeInicioSesion">
+    <Parameter Name="Usuario" Parameter="usuario" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Contrasena" Parameter="contrasena" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="ComprobacionDeInicioSesionResult">
+      <Column Name="ExisteU" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

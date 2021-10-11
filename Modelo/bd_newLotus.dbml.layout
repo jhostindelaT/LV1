@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="bd_newLotus">
+  <DataContextMoniker Name="/bd_newLotusDataContext" />
+  <nestedChildShapes>
+    <classShape Id="caf375be-3f4a-49f2-8006-2fc8ee9ed17c" absoluteBounds="3.5, 2.125, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/bd_newLotusDataContext/Tbl_Usuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="20f67fa1-238a-4616-97c0-1bb5b27ca784" absoluteBounds="3.515, 2.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="de988808-08a4-43bb-8f6d-dce630d91885" absoluteBounds="0.75, 2.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/bd_newLotusDataContext/Tbl_Capasidad" />
+      <nestedChildShapes>
+        <elementListCompartment Id="544c2024-cbb8-42ea-94d4-2bd8e7ca5c83" absoluteBounds="0.765, 3.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="16b531fb-c663-4521-9745-2eaabfede158" absoluteBounds="3.5, 6.75, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/bd_newLotusDataContext/Tbl_grado" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9672ac55-aa04-4862-b759-7079eaaa6b57" absoluteBounds="3.515, 7.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="836ffbf2-9f9a-4631-a627-a774c34196a7" absoluteBounds="6.25, 2.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/bd_newLotusDataContext/Tbl_Matricula" />
+      <nestedChildShapes>
+        <elementListCompartment Id="61fdddc4-eb71-409f-93ce-da60d0508375" absoluteBounds="6.265, 3.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="49ec0af8-d16c-4c7c-9d22-72f573eac802" absoluteBounds="6.25, 6.625, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/bd_newLotusDataContext/Tbl_seccion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="250694ca-485d-4d38-9196-c0d800b6fe30" absoluteBounds="6.265, 7.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aa6931b7-b779-4bfe-abcd-0564fc5def97" absoluteBounds="0.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/bd_newLotusDataContext/Tbl_TipoUsuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6f4a6f6b-b058-40cc-af29-2902ca268a46" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 3.34699625651042); (3.5 : 3.34699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/bd_newLotusDataContext/Tbl_Capasidad/Tbl_Capasidad_Tbl_Usuario" />
+      <nodes>
+        <classShapeMoniker Id="de988808-08a4-43bb-8f6d-dce630d91885" />
+        <classShapeMoniker Id="caf375be-3f4a-49f2-8006-2fc8ee9ed17c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.75); (5.875 : 6.375); (5.875 : 4.31899251302083); (6.25 : 3.94399251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/bd_newLotusDataContext/Tbl_grado/Tbl_grado_Tbl_Matricula" />
+      <nodes>
+        <classShapeMoniker Id="16b531fb-c663-4521-9745-2eaabfede158" />
+        <classShapeMoniker Id="836ffbf2-9f9a-4631-a627-a774c34196a7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 3.31574375651042); (6.25 : 3.31574375651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/bd_newLotusDataContext/Tbl_Usuario/Tbl_Usuario_Tbl_Matricula" />
+      <nodes>
+        <classShapeMoniker Id="caf375be-3f4a-49f2-8006-2fc8ee9ed17c" />
+        <classShapeMoniker Id="836ffbf2-9f9a-4631-a627-a774c34196a7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 7.37824875651042); (6.25 : 7.37824875651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/bd_newLotusDataContext/Tbl_grado/Tbl_grado_Tbl_seccion" />
+      <nodes>
+        <classShapeMoniker Id="16b531fb-c663-4521-9745-2eaabfede158" />
+        <classShapeMoniker Id="49ec0af8-d16c-4c7c-9d22-72f573eac802" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.34699625651042); (4.5 : 1.34699625651042); (4.5 : 2.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/bd_newLotusDataContext/Tbl_TipoUsuario/Tbl_TipoUsuario_Tbl_Usuario" />
+      <nodes>
+        <classShapeMoniker Id="aa6931b7-b779-4bfe-abcd-0564fc5def97" />
+        <classShapeMoniker Id="caf375be-3f4a-49f2-8006-2fc8ee9ed17c" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

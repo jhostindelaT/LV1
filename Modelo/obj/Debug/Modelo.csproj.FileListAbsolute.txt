@@ -1,0 +1,6 @@
+c:\users\programacion\documents\visual studio 2013\Projects\New_proyectLotus\Modelo\bin\Debug\Modelo.dll.config
+c:\users\programacion\documents\visual studio 2013\Projects\New_proyectLotus\Modelo\bin\Debug\Modelo.dll
+c:\users\programacion\documents\visual studio 2013\Projects\New_proyectLotus\Modelo\bin\Debug\Modelo.pdb
+c:\users\programacion\documents\visual studio 2013\Projects\New_proyectLotus\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+c:\users\programacion\documents\visual studio 2013\Projects\New_proyectLotus\Modelo\obj\Debug\Modelo.dll
+c:\users\programacion\documents\visual studio 2013\Projects\New_proyectLotus\Modelo\obj\Debug\Modelo.pdb
