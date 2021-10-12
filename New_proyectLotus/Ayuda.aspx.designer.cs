@@ -10,7 +10,7 @@
 namespace New_proyectLotus {
     
     
-    public partial class index {
+    public partial class Ayuda {
         
         /// <summary>
         /// Control ScriptManager1.
@@ -31,12 +31,12 @@ namespace New_proyectLotus {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// Control Titulo.
+        /// Control Btn_HacerPrueba.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Titulo;
+        protected global::System.Web.UI.WebControls.Button Btn_HacerPrueba;
     }
 }

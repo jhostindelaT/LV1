@@ -5,16 +5,12 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace New_proyectLotus
+namespace New_proyectLotus.Pantallas.Alumnos
 {
-    public partial class index : System.Web.UI.Page
+    public partial class MasterPageAluno : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Titulo.Style["font-size"] = "400%";
-            Titulo.Style["font-family"] = "tekton-pro-bold";
-            Titulo.Style["color"] = "#C30174";
-
 
         }
     }

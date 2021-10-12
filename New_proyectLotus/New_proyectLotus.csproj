@@ -57,6 +57,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Ayuda.aspx" />
+    <Content Include="InicioSesion.aspx" />
+    <Content Include="Pantallas\Alumnos\IndexAlumnos.aspx" />
     <Content Include="Pantallas\Maestro\MasterPageDocente.Master" />
     <Content Include="RecursosDiseño\Iconos\Contraseñ.psd" />
     <Content Include="RecursosDiseño\Iconos\User.psd" />
@@ -162,6 +165,7 @@
     <Content Include="Contenido\CImagenes\Fuentes\contenido\tekton-pro-bold.otf" />
     <Content Include="Contenido\CImagenes\Fuentes\contenido\tekton-pro.otf" />
     <Content Include="MasterPageIfNewLotus.Master" />
+    <Content Include="Pantallas\Alumnos\MasterPageAluno.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -216,6 +220,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ayuda.aspx.cs">
+      <DependentUpon>Ayuda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ayuda.aspx.designer.cs">
+      <DependentUpon>Ayuda.aspx</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -223,11 +234,33 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="InicioSesion.aspx.cs">
+      <DependentUpon>InicioSesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioSesion.aspx.designer.cs">
+      <DependentUpon>InicioSesion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MasterPageIfNewLotus.Master.cs">
       <DependentUpon>MasterPageIfNewLotus.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="MasterPageIfNewLotus.Master.designer.cs">
       <DependentUpon>MasterPageIfNewLotus.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Alumnos\IndexAlumnos.aspx.cs">
+      <DependentUpon>IndexAlumnos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Alumnos\IndexAlumnos.aspx.designer.cs">
+      <DependentUpon>IndexAlumnos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Alumnos\MasterPageAluno.Master.cs">
+      <DependentUpon>MasterPageAluno.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Alumnos\MasterPageAluno.Master.designer.cs">
+      <DependentUpon>MasterPageAluno.Master</DependentUpon>
     </Compile>
     <Compile Include="Pantallas\Maestro\IndexDocente.aspx.cs">
       <DependentUpon>IndexDocente.aspx</DependentUpon>
@@ -249,6 +282,7 @@
     </Compile>
     <Compile Include="Pantallas\Maestro\Registro_Academico.aspx.cs">
       <DependentUpon>Registro_Academico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pantallas\Maestro\Registro_Academico.aspx.designer.cs">
       <DependentUpon>Registro_Academico.aspx</DependentUpon>
