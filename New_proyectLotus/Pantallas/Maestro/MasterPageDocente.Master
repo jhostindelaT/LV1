@@ -25,37 +25,41 @@
 
 </head>
 <body>
-
+    
     <form id="form1" runat="server">
-
         <div class="wrapper d-flex align-items-stretch">
 
             <nav id="sidebar" style="background-color: #C30174; font-size: 38px;">
                 <div class="custom-menu">
                     <button type="button" id="sidebarCollapse" class="btn btn-primary"></button>
+                      
                 </div>
-
+                 
                 <div class="img bg-wrap text-center py-4" style="background-image: url(Contenido/CImagenes/PerfilParner/Logo%20Garden%20Lotus_Mesa%20de%20trabajo%201.png); width: 295px; height: 328px;">
                 </div>
                 <ul class="list-unstyled components mb-5" style="font-family: tekton-pro-bold;">
                     <li class="">
                         <a href="IndexDocente.aspx" style="font-size: 28px;"><span class="fa fa-home mr-3"></span>Inicio</a>
                     </li>
-                    <li class="">
-                        <a href="../../Index.aspx" style="font-size: 28px;"><span class="fa fa-sign-out"><small class="d-flex align-items-center justify-content-center"></small></span>Cerrar Sesion</a>
+                      <li class="">
+                        <a href="../Alumnos/ConfiguracionesAlumnos.aspx" style="font-size: 28px;"><span class="fa fa-cog" aria-hidden="true"></span>Configuracion</a>
                     </li>
+          
 
                 </ul>
 
             </nav>
 
-
-
+            
+         
             <div id="content">
+                   
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    
                 </asp:ContentPlaceHolder>
-            </div>
 
+            </div>
+         
         </div>
     </form>
     <!--Empiezan los Script-->

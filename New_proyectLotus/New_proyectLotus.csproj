@@ -59,7 +59,9 @@
   <ItemGroup>
     <Content Include="Ayuda.aspx" />
     <Content Include="InicioSesion.aspx" />
+    <Content Include="Pantallas\Alumnos\ConfiguracionesAlumnos.aspx" />
     <Content Include="Pantallas\Alumnos\IndexAlumnos.aspx" />
+    <Content Include="Pantallas\Maestro\ConfiguracionesMaestro.aspx" />
     <Content Include="Pantallas\Maestro\MasterPageDocente.Master" />
     <Content Include="RecursosDiseño\Iconos\Contraseñ.psd" />
     <Content Include="RecursosDiseño\Iconos\User.psd" />
@@ -248,6 +250,13 @@
     <Compile Include="MasterPageIfNewLotus.Master.designer.cs">
       <DependentUpon>MasterPageIfNewLotus.Master</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas\Alumnos\ConfiguracionesAlumnos.aspx.cs">
+      <DependentUpon>ConfiguracionesAlumnos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Alumnos\ConfiguracionesAlumnos.aspx.designer.cs">
+      <DependentUpon>ConfiguracionesAlumnos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas\Alumnos\IndexAlumnos.aspx.cs">
       <DependentUpon>IndexAlumnos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -262,14 +271,23 @@
     <Compile Include="Pantallas\Alumnos\MasterPageAluno.Master.designer.cs">
       <DependentUpon>MasterPageAluno.Master</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas\Maestro\ConfiguracionesMaestro.aspx.cs">
+      <DependentUpon>ConfiguracionesMaestro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Maestro\ConfiguracionesMaestro.aspx.designer.cs">
+      <DependentUpon>ConfiguracionesMaestro.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas\Maestro\IndexDocente.aspx.cs">
       <DependentUpon>IndexDocente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pantallas\Maestro\IndexDocente.aspx.designer.cs">
       <DependentUpon>IndexDocente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pantallas\Maestro\MasterPageDocente.Master.cs">
       <DependentUpon>MasterPageDocente.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pantallas\Maestro\MasterPageDocente.Master.designer.cs">
       <DependentUpon>MasterPageDocente.Master</DependentUpon>

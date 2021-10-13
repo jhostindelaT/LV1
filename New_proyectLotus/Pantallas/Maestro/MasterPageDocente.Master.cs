@@ -11,6 +11,7 @@ namespace ahoraSiEsteEsEncerio.Pantallas.Maestro
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            int UsuarioLInea = (int)Session["DocenteInicia"];
 
         }
     }

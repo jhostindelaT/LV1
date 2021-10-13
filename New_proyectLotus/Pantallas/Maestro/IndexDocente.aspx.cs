@@ -14,6 +14,7 @@ namespace ahoraSiEsteEsEncerio.Pantallas.Maestro
             int UsuarioLInea = (int)Session["DocenteInicia"];
 
             
+            
         }
     }
 }

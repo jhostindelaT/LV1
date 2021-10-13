@@ -38,7 +38,7 @@
         <elementListCompartment Id="6f4a6f6b-b058-40cc-af29-2902ca268a46" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.75 : 3.34699625651042); (3.5 : 3.34699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 3.34699625651042); (3.5 : 3.34699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/bd_newLotusDataContext/Tbl_Capasidad/Tbl_Capasidad_Tbl_Usuario" />
       <nodes>
         <classShapeMoniker Id="de988808-08a4-43bb-8f6d-dce630d91885" />
@@ -52,21 +52,21 @@
         <classShapeMoniker Id="836ffbf2-9f9a-4631-a627-a774c34196a7" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 3.31574375651042); (6.25 : 3.31574375651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 3.31574375651042); (6.25 : 3.31574375651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/bd_newLotusDataContext/Tbl_Usuario/Tbl_Usuario_Tbl_Matricula" />
       <nodes>
         <classShapeMoniker Id="caf375be-3f4a-49f2-8006-2fc8ee9ed17c" />
         <classShapeMoniker Id="836ffbf2-9f9a-4631-a627-a774c34196a7" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 7.37824875651042); (6.25 : 7.37824875651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 7.37824875651042); (6.25 : 7.37824875651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/bd_newLotusDataContext/Tbl_grado/Tbl_grado_Tbl_seccion" />
       <nodes>
         <classShapeMoniker Id="16b531fb-c663-4521-9745-2eaabfede158" />
         <classShapeMoniker Id="49ec0af8-d16c-4c7c-9d22-72f573eac802" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 1.34699625651042); (4.5 : 1.34699625651042); (4.5 : 2.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 1.34699625651042); (4.5 : 1.34699625651042); (4.5 : 2.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/bd_newLotusDataContext/Tbl_TipoUsuario/Tbl_TipoUsuario_Tbl_Usuario" />
       <nodes>
         <classShapeMoniker Id="aa6931b7-b779-4bfe-abcd-0564fc5def97" />

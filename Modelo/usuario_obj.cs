@@ -30,9 +30,9 @@ namespace Modelo
             bd_newLotusDataContext dc = new bd_newLotusDataContext();
             try
             {
-                if (dc.Tbl_Usuario.Any(a => a.NombreUsuario == Nombre && a.Contraseña == ContraseñaUsuario))
+                if (dc.Tbl_Usuario.Any(a => a.Usuario == Nombre && a.Contraseña == ContraseñaUsuario))
                 {
-                    return (from ID_Usuario in dc.Tbl_Usuario where (ID_Usuario.Usuario == Nombre && ID_Usuario.Contraseña == ContraseñaUsuario) select ID_Usuario).First().ID_usuario;
+                    return (from ID_Usuario in dc.Tbl_Usuario where (ID_Usuario.Usuario == Nombre && ID_Usuario.Contraseña == ContraseñaUsuario) select ID_Usuario).First().ID_TipoUsuario;
 
                 }
                 else
@@ -44,8 +44,8 @@ namespace Modelo
             }
             catch (Exception)
             {
-
-                return 0;
+                throw;
+                //return 0;
             }
 
         }
@@ -79,6 +79,65 @@ namespace Modelo
 
 
         }
+
+        public Boolean SeActivaUsuario(int ID_Usuario)
+        {
+            bd_newLotusDataContext dc = new bd_newLotusDataContext();
+
+            try
+            {
+                if (dc.Tbl_Usuario.Any(a => a.ID_usuario == ID_Usuario))
+                {
+                    var actualizarU = (from usuario in dc.Tbl_Usuario where usuario.ID_usuario == ID_Usuario select usuario).First();
+
+                    actualizarU.Linea = (bool)true;
+                    dc.SubmitChanges();
+                    return true;
+                }
+                else {
+
+
+                    return false;
+                }    
+
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        
+        }
+
+        public Boolean SeDesactivaUsuario(int ID_Usuario)
+        {
+            bd_newLotusDataContext dc = new bd_newLotusDataContext();
+
+            try
+            {
+                if (dc.Tbl_Usuario.Any(a => a.ID_usuario == ID_Usuario))
+                {
+                    var actualizarU = (from usuario in dc.Tbl_Usuario where usuario.ID_usuario == ID_Usuario select usuario).First();
+
+                    actualizarU.Linea = (bool)false;
+                    dc.SubmitChanges();
+                    return true;
+                }
+                else
+                {
+
+
+                    return false;
+                }
+
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+        }
+
+
 
 
     }

@@ -61,20 +61,51 @@ namespace New_proyectLotus
             {
                 usuario_obj User = new usuario_obj();
                 bool Resultado = User.iniciarSesion(Usuario, ContrasenaUsuario);
+
                 int Inicio = User.ObntenerIdUsuario(Usuario, ContrasenaUsuario);
 
                 if (Resultado)
                 {
 
-                    if (Inicio == 1)
-                    {
-                        Session["DocenteInicia"] = User.ObntenerIdUsuario(Usuario, ContrasenaUsuario);
 
-                        Response.Redirect("Pantallas/Maestro/IndexDocente.aspx");
+                    int ID = User.ObntenerIdUsuario(Usuario, ContrasenaUsuario);
+                 
+                    switch (Inicio)
+                    {
+                        case 1://
+
+
+                            bool IniciaDocente = User.SeActivaUsuario(ID);
+                          
+                            if (IniciaDocente)
+                            {
+                            Session["DocenteInicia"] = ID;
+                            Response.Redirect("Pantallas/Maestro/IndexDocente.aspx"); 
+                            }
+                            else{
+
+                            }
+
+                      
+                         
+                            break;
+
+                        case 2:
+                            Session["TutorInicia"] = ID;
+                            Response.Redirect("Pantallas/Maestro/IndexDocente.aspx");
+
+                            break;
+                        case 3:
+                            Session["EstudianteIncia"] = ID;
+                            Response.Redirect("Pantallas/Alumnos/IndexAlumnos.aspx");
+
+                            break;
+
+                        default:
+
+                            break;
                     }
 
-
-                    
 
                 }
                 else

@@ -23,7 +23,7 @@
             $('#staticBackdrop').modal('show');
         }
 
-
+        
     </script>
     <div style="width: 100%; height: 100%; background-image: url(Contenido/CImagenes/Fondos/pantallaG/Fondo%20inicio%20de%20sesion%20test2.png)">
 
@@ -118,7 +118,7 @@
                             <!--Boton Iniciar cesion en Msistros-->
                             <div id="Borton_COntraseñaP" style="text-align: center; margin-top: 30px;">
 
-                                <asp:Button ID="IniciarMaestro" OnClick="IniciarMaestro_Click"  UseSubmitBehavior="false" runat="server" Text="Entrar" />
+                                <asp:Button ID="IniciarMaestro" OnClick="IniciarMaestro_Click"   runat="server" Text="Entrar" />
 
                             </div>
                         </div>

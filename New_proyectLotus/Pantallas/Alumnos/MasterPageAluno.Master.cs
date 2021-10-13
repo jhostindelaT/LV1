@@ -11,7 +11,7 @@ namespace New_proyectLotus.Pantallas.Alumnos
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            int UsuarioLInea = (int)Session["EstudianteIncia"];
         }
     }
 }
