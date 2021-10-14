@@ -21,7 +21,9 @@ namespace New_proyectLotus.Pantallas.Maestro
             int UsuarioLInea = (int)Session["DocenteInicia"];
             usuario_obj user = new usuario_obj();
             bool IniciaDocente = user.SeDesactivaUsuario(UsuarioLInea);
+          
             Response.Redirect("../../index.aspx"); 
         }
+
     }
 }

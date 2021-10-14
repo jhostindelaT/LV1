@@ -25,7 +25,33 @@ namespace Modelo
 
 
         }
-        public int ObntenerIdUsuario(string Nombre, string ContraseñaUsuario)
+
+        public int ObtenerElIdUsuario(string NombreUsuario, string Contraseña)
+        {
+            bd_newLotusDataContext dc = new bd_newLotusDataContext();
+            try
+            {
+                if (dc.Tbl_Usuario.Any(a => a.Usuario == NombreUsuario && a.Contraseña == Contraseña))
+                {
+                    return (from UsuarioLinea in dc.Tbl_Usuario where (UsuarioLinea.Usuario == NombreUsuario && UsuarioLinea.Contraseña == Contraseña) select UsuarioLinea).First().ID_usuario; 
+
+                }
+                else
+                {
+                    return 0;
+                }
+
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+
+        }
+
+
+        public int ObntenerIdTipoUsuario(string Nombre, string ContraseñaUsuario)
         {
             bd_newLotusDataContext dc = new bd_newLotusDataContext();
             try
@@ -80,6 +106,8 @@ namespace Modelo
 
         }
 
+
+
         public Boolean SeActivaUsuario(int ID_Usuario)
         {
             bd_newLotusDataContext dc = new bd_newLotusDataContext();
@@ -90,22 +118,24 @@ namespace Modelo
                 {
                     var actualizarU = (from usuario in dc.Tbl_Usuario where usuario.ID_usuario == ID_Usuario select usuario).First();
 
+
                     actualizarU.Linea = (bool)true;
                     dc.SubmitChanges();
                     return true;
                 }
-                else {
+                else
+                {
 
 
                     return false;
-                }    
+                }
 
             }
             catch (Exception)
             {
                 return false;
             }
-        
+
         }
 
         public Boolean SeDesactivaUsuario(int ID_Usuario)

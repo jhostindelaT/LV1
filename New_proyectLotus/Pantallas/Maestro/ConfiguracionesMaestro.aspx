@@ -19,7 +19,7 @@
                 <fieldset>
                     <div id="ConfiguracionesBasicas" style="margin-left:4%; margin-top:4%;">
 
-                        <asp:Button ID="Btn_CerrarSesion" runat="server" OnClick="Btn_CerrarSesion_Click" Text="CERRAR CECION"/>
+                        <asp:Button ID="CerrarSesion" OnClick="Btn_CerrarSesion_Click"  runat="server" Text="Cerra Sesion" />
                        
                     </div>
 

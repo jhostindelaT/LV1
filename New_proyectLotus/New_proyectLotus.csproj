@@ -59,10 +59,11 @@
   <ItemGroup>
     <Content Include="Ayuda.aspx" />
     <Content Include="InicioSesion.aspx" />
-    <Content Include="Pantallas\Alumnos\ConfiguracionesAlumnos.aspx" />
+    <Content Include="Pantallas\Alumnos\ConfiguracionAlumno.aspx" />
     <Content Include="Pantallas\Alumnos\IndexAlumnos.aspx" />
     <Content Include="Pantallas\Maestro\ConfiguracionesMaestro.aspx" />
     <Content Include="Pantallas\Maestro\MasterPageDocente.Master" />
+    <Content Include="Pantallas\Maestro\RegistroPadres.aspx" />
     <Content Include="RecursosDiseño\Iconos\Contraseñ.psd" />
     <Content Include="RecursosDiseño\Iconos\User.psd" />
     <Content Include="RecursosDiseño\Imagenes\slideshow.psd" />
@@ -250,12 +251,12 @@
     <Compile Include="MasterPageIfNewLotus.Master.designer.cs">
       <DependentUpon>MasterPageIfNewLotus.Master</DependentUpon>
     </Compile>
-    <Compile Include="Pantallas\Alumnos\ConfiguracionesAlumnos.aspx.cs">
-      <DependentUpon>ConfiguracionesAlumnos.aspx</DependentUpon>
+    <Compile Include="Pantallas\Alumnos\ConfiguracionAlumno.aspx.cs">
+      <DependentUpon>ConfiguracionAlumno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pantallas\Alumnos\ConfiguracionesAlumnos.aspx.designer.cs">
-      <DependentUpon>ConfiguracionesAlumnos.aspx</DependentUpon>
+    <Compile Include="Pantallas\Alumnos\ConfiguracionAlumno.aspx.designer.cs">
+      <DependentUpon>ConfiguracionAlumno.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pantallas\Alumnos\IndexAlumnos.aspx.cs">
       <DependentUpon>IndexAlumnos.aspx</DependentUpon>
@@ -294,9 +295,17 @@
     </Compile>
     <Compile Include="Pantallas\Maestro\MenuRegistroAcademico.aspx.cs">
       <DependentUpon>MenuRegistroAcademico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pantallas\Maestro\MenuRegistroAcademico.aspx.designer.cs">
       <DependentUpon>MenuRegistroAcademico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Maestro\RegistroPadres.aspx.cs">
+      <DependentUpon>RegistroPadres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Maestro\RegistroPadres.aspx.designer.cs">
+      <DependentUpon>RegistroPadres.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pantallas\Maestro\Registro_Academico.aspx.cs">
       <DependentUpon>Registro_Academico.aspx</DependentUpon>

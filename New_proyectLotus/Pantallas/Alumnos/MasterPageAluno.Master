@@ -25,6 +25,7 @@
 
 </head>
 <body>
+
     
     <form id="form1" runat="server">
         <div class="wrapper d-flex align-items-stretch">
@@ -42,7 +43,7 @@
                         <a href="IndexAlumnos.aspx" style="font-size: 28px;"><span class="fa fa-home mr-3"></span>Inicio</a>
                     </li>
                       <li class="">
-                        <a href="ConfiguracionesAlumnos.aspx" style="font-size: 28px;"><span class="fa fa-cog" aria-hidden="true"></span>Configuracion</a>
+                        <a href="ConfiguracionAlumno.aspx" style="font-size: 28px;"><span class="fa fa-cog" aria-hidden="true"></span>Configuracion</a>
                     </li>
           
 

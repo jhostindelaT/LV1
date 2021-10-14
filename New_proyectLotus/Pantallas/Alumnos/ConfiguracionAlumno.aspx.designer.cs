@@ -10,7 +10,7 @@
 namespace New_proyectLotus.Pantallas.Alumnos {
     
     
-    public partial class ConfiguracionesMaestros {
+    public partial class ConfiguracionAlumno {
         
         /// <summary>
         /// Control ScriptManager1.
@@ -31,12 +31,12 @@ namespace New_proyectLotus.Pantallas.Alumnos {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// Control Btn_CerrarSesion.
+        /// Control CerrarSesion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn_CerrarSesion;
+        protected global::System.Web.UI.WebControls.Button CerrarSesion;
     }
 }

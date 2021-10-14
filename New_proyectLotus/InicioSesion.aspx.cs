@@ -62,17 +62,18 @@ namespace New_proyectLotus
                 usuario_obj User = new usuario_obj();
                 bool Resultado = User.iniciarSesion(Usuario, ContrasenaUsuario);
 
-                int Inicio = User.ObntenerIdUsuario(Usuario, ContrasenaUsuario);
+                int Inicio = User.ObntenerIdTipoUsuario(Usuario, ContrasenaUsuario);
 
                 if (Resultado)
                 {
 
 
-                    int ID = User.ObntenerIdUsuario(Usuario, ContrasenaUsuario);
+
+                    int ID = User.ObtenerElIdUsuario (Usuario, ContrasenaUsuario);
                  
                     switch (Inicio)
                     {
-                        case 1://
+                        case 1:
 
 
                             bool IniciaDocente = User.SeActivaUsuario(ID);
@@ -82,23 +83,42 @@ namespace New_proyectLotus
                             Session["DocenteInicia"] = ID;
                             Response.Redirect("Pantallas/Maestro/IndexDocente.aspx"); 
                             }
-                            else{
-
-                            }
 
                       
                          
                             break;
 
+                           
                         case 2:
-                            Session["TutorInicia"] = ID;
-                            Response.Redirect("Pantallas/Maestro/IndexDocente.aspx");
+     
+                            bool IniciaTutor = User.SeActivaUsuario(ID);
+                          
+                            if (IniciaTutor)
+                            {
+                                Session["EstudianteIncia"] = ID;
+                                Response.Redirect("Pantallas/Maestro/IndexDocente.aspx");
+                            }
+                            else
+                            {
+
+                            }
+                            
+                           
 
                             break;
-                        case 3:
-                            Session["EstudianteIncia"] = ID;
-                            Response.Redirect("Pantallas/Alumnos/IndexAlumnos.aspx");
+                        case 3: 
+                              bool IniciaAlumno = User.SeActivaUsuario(ID);
+                          
+                            if (IniciaAlumno)
+                            {
+                                Session["EstudianteIncia"] = ID;
+                                Response.Redirect("Pantallas/Alumnos/IndexAlumnos.aspx");
+                            }
+                            else
+                            {
 
+                            }
+                            
                             break;
 
                         default:

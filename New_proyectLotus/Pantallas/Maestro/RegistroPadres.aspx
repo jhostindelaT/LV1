@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pantallas/Maestro/MasterPageDocente.Master" AutoEventWireup="true" CodeBehind="Registro_Academico.aspx.cs" Inherits="ahoraSiEsteEsEncerio.Pantallas.Maestro.Registro_Academico" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pantallas/Maestro/MasterPageDocente.Master" AutoEventWireup="true" CodeBehind="RegistroPadres.aspx.cs" Inherits="New_proyectLotus.Pantallas.Maestro.RegistroPadres" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -9,21 +9,24 @@
 
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
 
+
         <ContentTemplate>
             <fieldset>
 
                 <div id="Titulso" class="container" style="text-align: center; background-color: #c30174; color: white; margin-top: 2%; border-bottom-left-radius: 22px; border-top-left-radius: 22px; border-bottom-right-radius: 22px; width: 50%;">
-                    <h1 style="color: white; font-family: tekton-pro-bold">Agregar estudiantes</h1>
+                    <h1 style="color: white; font-family: tekton-pro-bold">Agregar Tutores</h1>
                 </div>
 
                 <div id="Contenido" class="container">
 
-
+ 
                     <div class="row">
                         <!--Fila de Agregar estudiante-->
                         <div class="col-sm-6">
                             <!--Titulo de cuerpo de estudiante-->
-                            <asp:DropDownList ID="ListaDeTipoUsuario" runat="server"></asp:DropDownList>
+                            <asp:DropDownList ID="TipoDeRegistro" runat="server">
+                                <asp:ListItem Value="ID_TipoUsuario"></asp:ListItem>
+                            </asp:DropDownList>
 
 
 
@@ -36,7 +39,7 @@
                         <div class="col-sm-6">
 
                             <!--Titulo de cuerpo de estudiante-->
-                          
+
 
 
 
@@ -46,7 +49,7 @@
 
 
                 </div>
-                
+
             </fieldset>
         </ContentTemplate>
     </asp:UpdatePanel>

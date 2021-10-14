@@ -7,10 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace ahoraSiEsteEsEncerio.Pantallas.Maestro {
+namespace New_proyectLotus.Pantallas.Maestro {
     
     
-    public partial class Registro_Academico {
+    public partial class RegistroPadres {
         
         /// <summary>
         /// Control ScriptManager1.
@@ -31,12 +31,12 @@ namespace ahoraSiEsteEsEncerio.Pantallas.Maestro {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// Control ListaDeTipoUsuario.
+        /// Control TipoDeRegistro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ListaDeTipoUsuario;
+        protected global::System.Web.UI.WebControls.DropDownList TipoDeRegistro;
     }
 }
