@@ -1,13 +1,12 @@
 USE [master]
 GO
-/****** Object:  Database [bd_proyectLotus]    Script Date: 23/11/2021 14:40:32 ******/
+/****** Object:  Database [bd_proyectLotus]    Script Date: 23/11/2021 15:30:45 ******/
 CREATE DATABASE [bd_proyectLotus]
  CONTAINMENT = NONE
  ON  PRIMARY 
 ( NAME = N'bd_proyectLotus', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SA\MSSQL\DATA\bd_proyectLotus.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
  LOG ON 
 ( NAME = N'bd_proyectLotus_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SA\MSSQL\DATA\bd_proyectLotus_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
- WITH CATALOG_COLLATION = DATABASE_DEFAULT
 GO
 ALTER DATABASE [bd_proyectLotus] SET COMPATIBILITY_LEVEL = 110
 GO
@@ -72,17 +71,11 @@ ALTER DATABASE [bd_proyectLotus] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF )
 GO
 ALTER DATABASE [bd_proyectLotus] SET TARGET_RECOVERY_TIME = 0 SECONDS 
 GO
-ALTER DATABASE [bd_proyectLotus] SET DELAYED_DURABILITY = DISABLED 
-GO
-ALTER DATABASE [bd_proyectLotus] SET ACCELERATED_DATABASE_RECOVERY = OFF  
-GO
 EXEC sys.sp_db_vardecimal_storage_format N'bd_proyectLotus', N'ON'
-GO
-ALTER DATABASE [bd_proyectLotus] SET QUERY_STORE = OFF
 GO
 USE [bd_proyectLotus]
 GO
-/****** Object:  Table [dbo].[Tbl_Capasidad]    Script Date: 23/11/2021 14:40:32 ******/
+/****** Object:  Table [dbo].[Tbl_Capasidad]    Script Date: 23/11/2021 15:30:45 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -93,10 +86,10 @@ CREATE TABLE [dbo].[Tbl_Capasidad](
  CONSTRAINT [PK_Tbl_Capasidad] PRIMARY KEY CLUSTERED 
 (
 	[ID_Capasidad] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Tbl_grado]    Script Date: 23/11/2021 14:40:32 ******/
+/****** Object:  Table [dbo].[Tbl_grado]    Script Date: 23/11/2021 15:30:45 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -107,10 +100,10 @@ CREATE TABLE [dbo].[Tbl_grado](
  CONSTRAINT [PK_Tbl_grado] PRIMARY KEY CLUSTERED 
 (
 	[ID_grado] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Tbl_Matricula]    Script Date: 23/11/2021 14:40:32 ******/
+/****** Object:  Table [dbo].[Tbl_Matricula]    Script Date: 23/11/2021 15:30:45 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -120,7 +113,7 @@ CREATE TABLE [dbo].[Tbl_Matricula](
 	[ID_grado] [int] NOT NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Tbl_Pruebas]    Script Date: 23/11/2021 14:40:32 ******/
+/****** Object:  Table [dbo].[Tbl_Pruebas]    Script Date: 23/11/2021 15:30:45 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -137,10 +130,10 @@ CREATE TABLE [dbo].[Tbl_Pruebas](
  CONSTRAINT [PK_Tbl_Pruebas] PRIMARY KEY CLUSTERED 
 (
 	[ID_Prueba] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Tbl_seccion]    Script Date: 23/11/2021 14:40:32 ******/
+/****** Object:  Table [dbo].[Tbl_seccion]    Script Date: 23/11/2021 15:30:45 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -152,10 +145,10 @@ CREATE TABLE [dbo].[Tbl_seccion](
  CONSTRAINT [PK_Tbl_seccion] PRIMARY KEY CLUSTERED 
 (
 	[ID_seccion] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Tbl_TipoUsuario]    Script Date: 23/11/2021 14:40:32 ******/
+/****** Object:  Table [dbo].[Tbl_TipoUsuario]    Script Date: 23/11/2021 15:30:45 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -166,10 +159,10 @@ CREATE TABLE [dbo].[Tbl_TipoUsuario](
  CONSTRAINT [PK_Tbl_TipoUsuario] PRIMARY KEY CLUSTERED 
 (
 	[ID_TipoUsuario] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Tbl_Usuario]    Script Date: 23/11/2021 14:40:32 ******/
+/****** Object:  Table [dbo].[Tbl_Usuario]    Script Date: 23/11/2021 15:30:45 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -187,7 +180,7 @@ CREATE TABLE [dbo].[Tbl_Usuario](
  CONSTRAINT [PK_Tbl_Usuario] PRIMARY KEY CLUSTERED 
 (
 	[ID_usuario] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
 SET IDENTITY_INSERT [dbo].[Tbl_Capasidad] ON 
@@ -290,7 +283,7 @@ ON DELETE CASCADE
 GO
 ALTER TABLE [dbo].[Tbl_Usuario] CHECK CONSTRAINT [FK_Tbl_Usuario_Tbl_TipoUsuario1]
 GO
-/****** Object:  StoredProcedure [dbo].[ComprobacionDeInicioSesion]    Script Date: 23/11/2021 14:40:32 ******/
+/****** Object:  StoredProcedure [dbo].[ComprobacionDeInicioSesion]    Script Date: 23/11/2021 15:30:45 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
