@@ -61,8 +61,11 @@
     <Content Include="InicioSesion.aspx" />
     <Content Include="Pantallas\Alumnos\ConfiguracionAlumno.aspx" />
     <Content Include="Pantallas\Alumnos\IndexAlumnos.aspx" />
+    <Content Include="Pantallas\Alumnos\RealizarPrueba.aspx" />
     <Content Include="Pantallas\Maestro\ConfiguracionesMaestro.aspx" />
+    <Content Include="Pantallas\Maestro\Estilos\stilosMaestros.css" />
     <Content Include="Pantallas\Maestro\MasterPageDocente.Master" />
+    <Content Include="Pantallas\Maestro\ListaDeLosEstudiantes.aspx" />
     <Content Include="Pantallas\Maestro\RegistroPadres.aspx" />
     <Content Include="RecursosDiseño\Iconos\Contraseñ.psd" />
     <Content Include="RecursosDiseño\Iconos\User.psd" />
@@ -272,6 +275,13 @@
     <Compile Include="Pantallas\Alumnos\MasterPageAluno.Master.designer.cs">
       <DependentUpon>MasterPageAluno.Master</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas\Alumnos\RealizarPrueba.aspx.cs">
+      <DependentUpon>RealizarPrueba.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Alumnos\RealizarPrueba.aspx.designer.cs">
+      <DependentUpon>RealizarPrueba.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas\Maestro\ConfiguracionesMaestro.aspx.cs">
       <DependentUpon>ConfiguracionesMaestro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -300,6 +310,13 @@
     <Compile Include="Pantallas\Maestro\MenuRegistroAcademico.aspx.designer.cs">
       <DependentUpon>MenuRegistroAcademico.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas\Maestro\ListaDeLosEstudiantes.aspx.cs">
+      <DependentUpon>ListaDeLosEstudiantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Maestro\ListaDeLosEstudiantes.aspx.designer.cs">
+      <DependentUpon>ListaDeLosEstudiantes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas\Maestro\RegistroPadres.aspx.cs">
       <DependentUpon>RegistroPadres.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -322,6 +339,7 @@
       <Name>Modelo</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

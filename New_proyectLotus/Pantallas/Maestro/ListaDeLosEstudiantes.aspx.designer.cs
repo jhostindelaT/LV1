@@ -7,10 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace ahoraSiEsteEsEncerio.Pantallas.Maestro {
+namespace New_proyectLotus.Pantallas.Maestro.Pantallas_Importantes.Lista_estudiante {
     
     
-    public partial class Registro_Academico {
+    public partial class ListaDeLosEstudiantes {
         
         /// <summary>
         /// Control ScriptManager1.
@@ -22,147 +22,165 @@ namespace ahoraSiEsteEsEncerio.Pantallas.Maestro {
         protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
-        /// Control Principal.
+        /// Control PanelPrincipal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel Principal;
+        protected global::System.Web.UI.UpdatePanel PanelPrincipal;
         
         /// <summary>
-        /// Control Lbl_Guardo.
+        /// Control Nuevo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lbl_Guardo;
+        protected global::System.Web.UI.WebControls.Button Nuevo;
         
         /// <summary>
-        /// Control Btn_Aceptar.
+        /// Control AceptarMoverse.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn_Aceptar;
+        protected global::System.Web.UI.WebControls.Button AceptarMoverse;
         
         /// <summary>
-        /// Control PanelGuardarDefinitivo.
+        /// Control Btn_Eliminar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel PanelGuardarDefinitivo;
+        protected global::System.Web.UI.WebControls.Button Btn_Eliminar;
         
         /// <summary>
-        /// Control Label1.
+        /// Control PanelAsignacion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.UpdatePanel PanelAsignacion;
         
         /// <summary>
-        /// Control CerrarModal.
+        /// Control curpoAsignacion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CerrarModal;
+        protected global::System.Web.UI.UpdatePanel curpoAsignacion;
         
         /// <summary>
-        /// Control GuardarDefinitivo.
+        /// Control btn_Matermaticas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button GuardarDefinitivo;
+        protected global::System.Web.UI.WebControls.Button btn_Matermaticas;
         
         /// <summary>
-        /// Control FormularioActualizar.
+        /// Control Button1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel FormularioActualizar;
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// Control DWL_Capasidad.
+        /// Control PanelMatematica.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DWL_Capasidad;
+        protected global::System.Web.UI.UpdatePanel PanelMatematica;
         
         /// <summary>
-        /// Control txt_Usuario.
+        /// Control CuerpoMatecaticas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_Usuario;
+        protected global::System.Web.UI.UpdatePanel CuerpoMatecaticas;
         
         /// <summary>
-        /// Control txt_contraseña.
+        /// Control Btn_Suma.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_contraseña;
+        protected global::System.Web.UI.WebControls.Button Btn_Suma;
         
         /// <summary>
-        /// Control txt_Nombre.
+        /// Control Button3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_Nombre;
+        protected global::System.Web.UI.WebControls.Button Button3;
         
         /// <summary>
-        /// Control txt_Apellido.
+        /// Control txt_primero.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_Apellido;
+        protected global::System.Web.UI.WebControls.TextBox txt_primero;
         
         /// <summary>
-        /// Control txt_Edad.
+        /// Control txt_Segundo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_Edad;
+        protected global::System.Web.UI.WebControls.TextBox txt_Segundo;
         
         /// <summary>
-        /// Control GuardarAlumno.
+        /// Control Txt_Respuestas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button GuardarAlumno;
+        protected global::System.Web.UI.WebControls.TextBox Txt_Respuestas;
         
         /// <summary>
-        /// Control traladarse.
+        /// Control Btn_Enviar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button traladarse;
+        protected global::System.Web.UI.WebControls.Button Btn_Enviar;
+        
+        /// <summary>
+        /// Control dataupdate.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel dataupdate;
+        
+        /// <summary>
+        /// Control ListaDeLosAulunos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView ListaDeLosAulunos;
     }
 }

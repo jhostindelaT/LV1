@@ -1,5 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="bd_proyectLotus" Class="bd_newLotusDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=bd_proyectLotus;User ID=sa" SettingsObjectName="Modelo.Properties.Settings" SettingsPropertyName="bd_proyectLotusConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=45LAB3PC03\SA;Initial Catalog=bd_proyectLotus;User ID=sa" SettingsObjectName="Modelo.Properties.Settings" SettingsPropertyName="bd_proyectLotusConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Tbl_Capasidad" Member="Tbl_Capasidad">
+    <Type Name="Tbl_Capasidad">
+      <Column Name="ID_Capasidad" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre_Capasidad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Tbl_Capasidad_Tbl_Usuario" Member="Tbl_Usuario" ThisKey="ID_Capasidad" OtherKey="ID_Capasidad" Type="Tbl_Usuario" />
+    </Type>
+  </Table>
   <Table Name="dbo.Tbl_Usuario" Member="Tbl_Usuario">
     <Type Name="Tbl_Usuario">
       <Column Name="ID_usuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -12,15 +19,9 @@
       <Column Name="Linea" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="Contraseña" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
       <Association Name="Tbl_Usuario_Tbl_Matricula" Member="Tbl_Matricula" ThisKey="ID_usuario" OtherKey="ID_usuario" Type="Tbl_Matricula" />
+      <Association Name="Tbl_Usuario_Tbl_Pruebas" Member="Tbl_Pruebas" ThisKey="ID_usuario" OtherKey="ID_usuario" Type="Tbl_Pruebas" />
       <Association Name="Tbl_Capasidad_Tbl_Usuario" Member="Tbl_Capasidad" ThisKey="ID_Capasidad" OtherKey="ID_Capasidad" Type="Tbl_Capasidad" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="Tbl_TipoUsuario_Tbl_Usuario" Member="Tbl_TipoUsuario" ThisKey="ID_TipoUsuario" OtherKey="ID_TipoUsuario" Type="Tbl_TipoUsuario" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Tbl_Capasidad" Member="Tbl_Capasidad">
-    <Type Name="Tbl_Capasidad">
-      <Column Name="ID_Capasidad" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Nombre_Capasidad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="Tbl_Capasidad_Tbl_Usuario" Member="Tbl_Usuario" ThisKey="ID_Capasidad" OtherKey="ID_Capasidad" Type="Tbl_Usuario" />
     </Type>
   </Table>
   <Table Name="dbo.Tbl_grado" Member="Tbl_grado">
@@ -52,6 +53,19 @@
       <Column Name="ID_TipoUsuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="NombretipoUsuario" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="Tbl_TipoUsuario_Tbl_Usuario" Member="Tbl_Usuario" ThisKey="ID_TipoUsuario" OtherKey="ID_TipoUsuario" Type="Tbl_Usuario" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Pruebas" Member="Tbl_Pruebas">
+    <Type Name="Tbl_Pruebas">
+      <Column Name="ID_Prueba" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_usuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Pregunta" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RespuestaPregunta" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RespuestaEstudiante" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Intentos" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Realizada" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Materia" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Tbl_Usuario_Tbl_Pruebas" Member="Tbl_Usuario" ThisKey="ID_usuario" OtherKey="ID_usuario" Type="Tbl_Usuario" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Function Name="dbo.ComprobacionDeInicioSesion" Method="ComprobacionDeInicioSesion">

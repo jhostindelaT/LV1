@@ -17,10 +17,11 @@
                 <!--Empieza el contenido de la pagina-->
                 <fieldset>
                     <div id="ConfiguracionesBasicas" style="margin-left:4%; margin-top:4%;">
-                        <asp:Button ID="CerrarSesion" OnClick="CerrarSesion_Click" runat="server" Text="Button" />
+                        <asp:Button ID="CerrarSesion" OnClick="CerrarSesion_Click" runat="server" Text="Cerrar Sesion" />
                     </div>
 
                 </fieldset>
             </ContentTemplate>
         </asp:UpdatePanel>
+        </div>
 </asp:Content>

@@ -38,7 +38,7 @@
 
                             <div class="col-sm-4">
 
-                                <a href="IndexDocente.aspx">
+                                <a href="ListaDeLosEstudiantes.aspx">
                                     <div class="card" style="height: 350px; border-top-left-radius: 30%; text-align: center; color: white; border-bottom-right-radius: 20%; background-color: #c30174;">
                                         <div class="card-body" style="">
                                             <h1 style="font-family: tekton-pro-bold; margin-top: 22%;color: white; margin-top: 25%;">Lista de Estudiantes</h1>

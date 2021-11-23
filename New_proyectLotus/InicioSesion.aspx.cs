@@ -10,6 +10,8 @@ namespace New_proyectLotus
 {
     public partial class InicioSesion : System.Web.UI.Page
     {
+
+       
         protected void Page_Load(object sender, EventArgs e)
         {
             Nombre.Style["font-size"] = "22px";
@@ -22,6 +24,9 @@ namespace New_proyectLotus
             Nombre.Style["width"] = "70%";
             Nombre.Style["color"] = "#C30174";
             Nombre.Style["font-family"] = "tekton-pro";
+          
+         
+
 
             ContrasenaM.Style["font-size"] = "22px";
             ContrasenaM.Style["border"] = "none";
@@ -42,8 +47,8 @@ namespace New_proyectLotus
             IniciarMaestro.Style["color"] = "white";
             IniciarMaestro.Style["border"] = "none";
             IniciarMaestro.Style["margin-bottom"] = "20%";
-
-
+            
+            
         }
 
         protected void IniciarMaestro_Click(object sender, EventArgs e)
@@ -51,7 +56,8 @@ namespace New_proyectLotus
 
             string Usuario = Nombre.Text;
             string ContrasenaUsuario = ContrasenaM.Text;
-
+            
+            
             if (Usuario.Length < 3 && ContrasenaUsuario.Length < 3)
             {
                 titulo1.Text = "usuario";
